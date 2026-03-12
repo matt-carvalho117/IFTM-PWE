@@ -1,14 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <title>Home - Projetos</title>
+    <style>
+        /* Centraliza a .main no meio da tela */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0f172a; /* Fundo escuro para contrastar */
+            font-family: "Share Tech", sans-serif;
+        }
 
-    <h1>Bem vindo ao diretório raiz</h1>
-    
-    
+        .main {
+            border: 2px solid #38bdf8; /* Borda colorida para combinar com o tema */
+            width: 450px;
+            height: 500px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* H1 com background de destaque */
+        h1 {
+            margin: 0;
+            padding: 20px;
+            background: #38bdf8; /* Cor de destaque */
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        /* Container da lista com barra de rolagem */
+        #list {
+            flex-grow: 1; /* Ocupa o espaço restante */
+            overflow-y: auto; /* Ativa a rolagem vertical */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaço entre os itens */
+        }
+
+        /* Estilização dos itens da lista */
+        .project-item {
+            background: #334155;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #38bdf8;
+            transition: transform 0.2s;
+        }
+
+        .project-item:hover {
+            transform: translateX(5px);
+            background: #475569;
+        }
+
+        a {
+            text-decoration: none;
+            color: #38bdf8;
+            font-weight: bold;
+            border: 1px solid #38bdf8;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #38bdf8;
+            color: #1e293b;
+        }
+
+        /* Customização da barra de rolagem */
+        #list::-webkit-scrollbar {
+            width: 6px;
+        }
+        #list::-webkit-scrollbar-thumb {
+            background: #38bdf8;
+            border-radius: 10px;
+        }
+        span{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Meus projetos</h1>
+        
+        <div id="list">
+            <div class="project-item">
+                <span>Lista 04</span>
+                <a href="https://matt-carvalho117.github.io/IFTM-PWE/1%C2%B0Periodo/PWE/listas/lista04/">Github</a>
+            </div>
+            <div class="project-item">
+                <span>Lista 05</span>
+                <a href="https://matt-carvalho117.github.io/IFTM-PWE/1%C2%B0Periodo/PWE/listas/lista05/">Github</a>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
