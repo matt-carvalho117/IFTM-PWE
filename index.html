@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Matheus Carvalho | Dev Portfolio</title>
+    <style>
+        :root {
+            --primary: #38bdf8;
+            --bg-dark: #020617;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+            font-family: "Share Tech", sans-serif;
+            color: var(--text-main);
+            overflow: hidden;
+        }
+
+        .identity-header {
+            text-align: center;
+            margin-bottom: 30px;
+            z-index: 10;
+        }
+
+        .label-prefix {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #decoded-name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            letter-spacing: -1px;
+            display: inline-block;
+            min-height: 1.2em;
+        }
+
+        /* Barra de digitação com transição suave */
+        #decoded-name::after {
+            content: '|';
+            margin-left: 8px;
+            color: var(--primary);
+            animation: blink 0.8s infinite;
+            transition: opacity 0.5s ease;
+            opacity: 1;
+        }
+
+        #decoded-name.done::after {
+            opacity: 0;
+            animation: none;
+        }
+
+        .typing-container {
+            height: 25px;
+            margin-bottom: 20px;
+        }
+
+        #typewriter {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-family: 'Space Mono', monospace;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .main {
+            width: 450px;
+            height: 420px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .card-header {
+            padding: 12px;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: var(--primary);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        #list {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .project-item {
+            background: rgba(51, 65, 85, 0.4);
+            padding: 14px 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .project-item:hover {
+            background: rgba(56, 189, 248, 0.1);
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 6px 14px;
+            border: 1px solid var(--primary);
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+        }
+
+        #list::-webkit-scrollbar { width: 4px; }
+        #list::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    </style>
+</head>
+
+<body>
+
+    
+        <span class="label-prefix">System Authorized // User:</span>
+        <div id="decoded-name"></div>
+        <div class="typing-container">
+            <span id="typewriter"></span>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="card-header">PWE_PROJECTS_DATABASE</div>
+        <div id="list">
+            <div class="project-item">
+                <span>Lista 04</span>
+                <a href="https://matt-carvalho117.github.io/IFTM-PWE/1%C2%B0Periodo/PWE/listas/lista04">Source Code</a>
+            </div>
+            <div class="project-item">
+                <span>Lista 05</span>
+                <a href="https://matt-carvalho117.github.io/IFTM-PWE/1%C2%B0Periodo/PWE/listas/lista05">Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nameElement = document.getElementById('decoded-name');
+        const typeElement = document.getElementById('typewriter');
+        const myName = "MATHEUS CARVALHO";
+        const subPhrases = ["Internet Systems", "IFTM Student", "Coding the future."];
+
+        const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+        async function startDecipher() {
+            // FASE 1: Escrevendo Matheus com erro
+            const part1_error = "MATHXY"; 
+            for (let i = 0; i <= part1_error.length; i++) {
+                nameElement.innerText = part1_error.substring(0, i);
+                await sleep(100 + Math.random() * 80);
+            }
+            await sleep(600);
+
+            // APAGA APENAS O ERRO (XY)
+            let currentText = part1_error;
+            while (currentText !== "MATH") {
+                currentText = currentText.slice(0, -1);
+                nameElement.innerText = currentText;
+                await sleep(80);
+            }
+            await sleep(300);
+
+            // COMPLETA E VAI ATÉ O ERRO NO SOBRENOME
+            const part2_error = "MATHEUS CARVALLO";
+            for (let i = 4; i <= part2_error.length; i++) {
+                nameElement.innerText = part2_error.substring(0, i);
+                await sleep(80 + Math.random() * 60);
+            }
+            await sleep(600);
+
+            // APAGA APENAS O ERRO (LLO)
+            currentText = part2_error;
+            while (currentText !== "MATHEUS CARVA") {
+                currentText = currentText.slice(0, -1);
+                nameElement.innerText = currentText;
+                await sleep(80);
+            }
+            await sleep(300);
+
+            // FINALIZA O NOME
+            for (let i = 13; i <= myName.length; i++) {
+                nameElement.innerText = myName.substring(0, i);
+                await sleep(100 + Math.random() * 50);
+            }
+
+            // Grava na sessão que a animação terminou
+            sessionStorage.setItem('animationViewed', 'true');
+            
+            await sleep(1000); 
+            nameElement.classList.add('done'); // Esmaece a barra
+            await sleep(500); 
+            startTypewriter();
+        }
+
+        // --- SUBTÍTULO ---
+        let phraseIdx = 0, charIdx = 0, isDeleting = false;
+        function startTypewriter() {
+            const current = subPhrases[phraseIdx];
+            typeElement.textContent = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
+            let speed = isDeleting ? 50 : 100;
+            if (!isDeleting && charIdx > current.length) { isDeleting = true; speed = 2500; }
+            else if (isDeleting && charIdx === 0) { isDeleting = false; phraseIdx = (phraseIdx + 1) % subPhrases.length; speed = 500; }
+            setTimeout(startTypewriter, speed);
+        }
+
+        // --- INICIALIZAÇÃO INTELIGENTE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('animationViewed')) {
+                // Modo Rápido (Já viu a animação)
+                nameElement.innerText = myName;
+                nameElement.classList.add('done');
+                // Começa o subtítulo direto sem delay
+                startTypewriter();
+            } else {
+                // Modo Impacto (Primeira vez)
+                startDecipher();
+            }
+        });
+    </script>
+</body>
+</html>
