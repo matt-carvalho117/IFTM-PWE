@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Formulário de Cadastro</legend>
+            <br>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            <br>
+            <br>
+
+            <label for="sexo">Sexo:</label>
+            <input type="radio" id="sexo" name="sexo">
+            <label for="sexo">Masculino</label>
+            <input type="radio" id="sexo2" name="sexo">
+            <label for="sexo2">Feminino</label>
+            <br>
+            <br>
+
+            <label for="ec">Estado Civil:</label>
+            <select id="ec">
+                <option value=""></option>
+                <option value="">Casado</option>
+                <option value="">Solteiro</option>
+                <option value="">Viúvo</option>
+                <option value="">Divorciado</option>
+                <option value="">Outro</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" inputmode="email" placeholder="email@email.com" title="email@email.com" required>
+            <br>
+            <br>
+
+            <label for="end">Endereço:</label>
+            <input type="text" id="end">
+            <br>
+            <br>
+            <label for="num">Número:</label>
+            <input type="number" id="num" min="1" max="1000" placeholder="1-1000" inputmode="numeric">
+            <br>
+            <br>
+            <label for="dt">Data de Nascimento:</label>
+            <input type="date" id="dt">
+
+            <br>
+            <br>
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(99) 99999-9999" title="(99) 99999-9999" required>
+            <br>
+            <br>
+
+            <label for="url">Página pessoal (site)</label>
+            <input type="url" id="url" inputmode="url" placeholder="https://meusite.com" title="https://meusite.com">
+
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            <br>
+            <br>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
