@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0; 
+}
+header nav ul li div{
+    width: 80px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: Oswald;
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border-bottom: 3px solid black;
+    margin: 0px 12px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+}
+.box1{
+    background-image: url('../img/faceBlack.png');
+}
+.box1:hover{
+    background-image: url('../img/face.png');
+    color: #4b96f8;
+    border-bottom: 3px solid #4b96f8;
+}
+.box2{
+    background-image: url('../img/instaBlack.png');
+}
+.box2:hover{
+    background-image: url('../img/insta.png');
+    color: #833AB4;
+    border-bottom: 3px solid #9c3ab4;
+}
+.box3{
+    background-image: url('../img/mapsBlack.png');
+}
+.box3:hover{
+    background-image: url('../img/maps.png');
+    color: #2e915e;
+    border-bottom: 3px solid #2e915e;
+}
+.box4{
+    background-image: url('../img/twitterBlack.png');
+}
+.box4:hover{
+    background-image: url('../img/twitter.png');
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
+.box5{
+    background-image: url('../img/youtubeBlack.png');
+}
+.box5:hover{
+    background-image: url('../img/youtube.png');
+    color: red;
+    border-bottom: 3px solid red;
+}
