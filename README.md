@@ -28,7 +28,6 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 
 | Sigla | Significado | Descrição |
 |-------|-------------|-----------|
-| **1°Periodo** | Primeiro Período | Projetos e exercícios do primeiro semestre do curso |
 | **PWE** | Projeto Web Estático | Disciplina focada em HTML, CSS e estrutura de páginas web estáticas |
 | **FSI** | Fundamentos de Sistemas para Internet | Disciplina que cobre conceitos fundamentais de web, arquitetura MVC e persistência de dados |
 
