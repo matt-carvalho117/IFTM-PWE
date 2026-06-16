@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container>div {
+    border: 1px solid black;
+    flex-grow: 1;
+    flex-basis: 0;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .test>div>div:nth-of-type(2) {
+        flex-grow: 2;
+    }
+}

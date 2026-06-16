@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn{
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    color: green;
+    border-radius: 25px;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: darkolivegreen;
+    color: yellow;
+}
+.btn:active{
+    transform: scale(0.9);
+}

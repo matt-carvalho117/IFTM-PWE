@@ -1,0 +1,14 @@
+.box{
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    background-image: url('../img/faceBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.box:hover{
+    background-image: url('../img/face.png');
+} 
