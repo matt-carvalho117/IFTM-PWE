@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+}
+
+button {
+    padding: 10px 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+.btn1 {
+    background-color: darkblue;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 20px;
+    background-color: darkblue;
+}
+
+.menu li {
+    margin: 5px 15px;
+    font-weight: bold;
+}
+
+.sec1:nth-of-type(1) {
+    width: 100%;
+    height: 350px;
+    background-image: url('../img/topo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(even) {
+    background-color: #dddddd;
+}
+
+section:nth-of-type(odd) {
+    background-color: white;
+}
+
+section {
+    margin: auto;
+}
+
+section>div {
+    padding: 30px;
+}
+
+.uber div h1,
+.uber div h2,
+.uber div p,
+.sec2 div h2,
+.sec2 div p,
+.sec2 div h3,
+.sec3 div div p,
+.sec3 div div img,
+.sec4 div div h2,
+.sec5 div h2,
+.sec5 div p,
+.sec5 div button,
+.sec6 div div h2,
+.sec6 div div p,
+.sec6 div div button,
+.sec6 div div img {
+    margin-bottom: 20px;
+}
+
+.sec3>div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sec3>div>div {
+    text-align: center;
+}
+
+.sec3 div div p {
+    text-align: justify;
+}
+
+.sec3 img,
+.sec6 img {
+    width: 100%;
+}
+
+.sec6>div>div:nth-of-type(2) {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 1200px;
+        padding: 30px;
+    }
+
+    .menu li {
+        margin: 5px 40px;
+    }
+
+    .sec3>div {
+        flex-direction: row;
+    }
+
+    .sec3 img {
+        width: 90%;
+    }
+
+    .sec6>div {
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        gap: 50px;
+
+    }
+
+    .sec6>div>div {
+        width: 50%;
+    }
+
+
+
+}
