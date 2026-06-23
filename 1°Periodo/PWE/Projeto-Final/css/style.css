@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Play:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "Play", sans-serif;
+}
+header ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+p{
+    color: #e2e8f0;
+    margin: 10px 0px;
+}
+h1, h2, h3{
+    font-family: "Electrolize", sans-serif;
+    color: white;
+}
+figcaption{
+    color: white;
+}
+img{
+    width: 100%;
+     border-radius: 20px;
+}
+section:nth-of-type(odd){
+    background-color: #0b0e14;
+}
+section:nth-of-type(even){
+    background-color: #121824;
+}
+section > div{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0px 30px;
+}
+.btn {
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid #00f0ff;
+    background-color: #121824;
+    margin: 20px 0px;
+    transition: all 0.1s;
+    color: white;
+}
+.btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.menu, .nav-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #0b0e14;
+    padding: 15px 0px;
+}
+.nav-links a{
+    padding: 20px 7px;
+    font-size: 1.2em;
+    transition: all 0.1s;
+
+}
+.nav-links a:hover{
+    text-decoration: underline;
+}
+.nav-links .active{
+    color: #00f0ff;
+}
+.menu{
+    border-bottom: 2px solid rgba(0, 240, 255, 0.4);
+}
+.logo span{
+    color:#00f0ff;
+    font-weight: bold;
+}
+.logo p{
+    font-size: 1.5em;
+}
+.welcome h1{
+    font-size: 3.5em;
+    line-height: 0.9;
+}
+.welcome p:nth-of-type(2){
+    text-align: right;
+}
+.line{
+    height: 1px;
+    border: 1px solid white;
+    margin: 20px 0px;
+}
+.objetivos > div{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.objetivos > div > div{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 20px;
+}
+
+.card{
+    padding: 20px;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    transition: all 0.2s;
+}
+.card:hover{
+    transform: translateY(-30px);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    border: 1px solid #00f0ff;
+}
+.card h3{
+    margin: 20px 0px;
+}
+
+
+
+footer{
+    background-color: #0b0e14;
+    text-align: center;
+    font-size: small;
+    padding: 40px;
+}

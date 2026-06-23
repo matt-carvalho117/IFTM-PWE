@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+    section>div {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .menu {
+        justify-content: space-between;
+        padding: 15px 50px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        padding: 20px 15px;
+
+    }
+
+    .objetivos>div>div {
+        flex-direction: row;
+    }
+
+    .sobre img {
+        width: 50%;
+    }
+
+    .welcome h1 {
+        font-size: 6em;
+        padding: 20px 0px;
+    }
+    .welcome > div{
+        width: 70%;
+    }
+    .sobre div div:nth-of-type(2){
+        display: flex;
+        flex-direction: row;
+    }
+   .sobre div div:nth-of-type(2) img{
+    width: 100%;
+   }
+
+    footer {
+        font-size: medium;
+    }
+}
