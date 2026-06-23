@@ -22,9 +22,7 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 - **MySQL**: Persistência de dados
 - **JavaScript**: Interatividade e dinâmica
 
-## 📁 Estrutura de Pastas
-
-### Siglas Principais
+## 📁 Glossário
 
 | Sigla | Significado | Descrição |
 |-------|-------------|-----------|
@@ -33,57 +31,98 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 
 ---
 
-## 📚 Conteúdo das Pastas
+## 📚 Estrutura do repositório
 
-### 📂 1°Periodo
+```
+1°Periodo/
+│
+├── PWE/
+│   ├── aulas/
+│   │   ├── (Exercícios feitos durante as aulas)
+│   │
+│   └── listas/
+│       ├── (Listas de exercícios progressivas (09, 10, 14...))
+│
+└── FSI/
+    └── cadastro-alunos/
+        ├── public/
+        │   ├── index.php (Interface de listagem)
+        │   └── salvar_contato.php (Processamento de requisições)
+        │
+        ├── config/
+        │   ├── Database.php (Conexão PDO com MySQL)
+        │   └── bootstrap.php (Inicialização da aplicação)
+        │
+        ├── app/
+        │   ├── Controllers/
+        │   │   └── ContatoController.php (Orquestração de requisições)
+        │   │
+        │   ├── Services/
+        │   │   └── ContatoService.php (Validação e regras de negócio)
+        │   │
+        │   └── Repositories/
+        │       └── ContatoRepository.php (Acesso a dados com Prepared Statements)
+        │
+        └── database/
+            └── schema.sql (Estrutura do banco de dados)
+```
 
-Primeira etapa do curso com projetos introdutórios.
+### 🌐 **PWE - Projeto Web Estático**
 
-#### 🌐 **PWE - Projeto Web Estático**
+Disciplina focada em desenvolvimento frontend com HTML e CSS puros.
 
-Esta pasta contém exercícios práticos sobre desenvolvimento frontend:
+**Estrutura:**
+- `aulas/` - Exercícios propostos durante as aulas
+- `listas/` - Listas de exercícios progressivas (09, 10, 14...)
 
-- **aulas/**: Exercícios propostos durante as aulas
-  - `ex/`: Exercício de apresentação de tecnologias
-  - Exemplos de HTML semântico e CSS estilização
-  
-- **listas/**: Listas de exercícios progressivas
-  - `lista09/`: Exercícios com layouts básicos e navegação
-  - `lista10/`: Layouts com posicionamento de elementos e floats
-  - `lista14/`: Seletores CSS avançados e box model
-  
 **Conceitos abordados:**
 - Estrutura semântica de HTML5
 - Propriedades CSS fundamentais (margin, padding, box-sizing)
-- Seletores CSS (element, class, ID, nth-child, etc.)
-- Navegação e listas
-- Posicionamento de elementos
-- Backgrounds e imagens
+- Seletores CSS (element, class, ID, nth-child, ::nth-of-type)
+- Layouts com floats e posicionamento
+- Navegação e estrutura de listas
+- Background images e propriedades visuais
 
 ---
 
-#### 🗄️ **FSI - Fundamentos de Sistemas para Internet**
+### 🗄️ **FSI - Fundamentos de Sistemas para Internet**
 
-Pasta dedicada ao aprendizado de arquitetura web, backend e bancos de dados:
+Disciplina focada em arquitetura web, backend e persistência de dados.
 
-- **cadastro-alunos/**: Projeto prático de cadastro com arquitetura MVC
-  - `public/`: Arquivos públicos e ponto de entrada da aplicação
-  - `config/`: Configurações (conexão com banco de dados)
-  - `app/Services/`: Lógica de negócios (validações, regras de aplicação)
-  - `app/Repositories/`: Camada de acesso a dados (interação com banco)
+**Estrutura do Projeto `cadastro-alunos`:**
+
+- **`public/`** - Ponto de entrada da aplicação e assets públicos
+  - `index.php` - Interface (View) para o usuário
+  - `salvar_contato.php` - Recebe requisições HTTP
+
+- **`config/`** - Configurações da aplicação
+  - `Database.php` - Classe de conexão com MySQL via PDO
+  - `bootstrap.php` - Carregamento automático de classes
+
+- **`app/Controllers/`** - Camada controladora
+  - Orquestra a requisição entre Services e Views
+
+- **`app/Services/`** - Lógica de negócios
+  - Valida dados de entrada
+  - Aplica regras de negócio
+
+- **`app/Repositories/`** - Acesso a dados
+  - Interage com o banco de dados
+  - Usa Prepared Statements para segurança
+
+- **`database/`** - Scripts do banco de dados
+  - `schema.sql` - Criação de tabelas
 
 **Conceitos abordados:**
 - Arquitetura MVC (Model-View-Controller)
 - Padrão Repository para acesso a dados
 - Service Layer para lógica de negócios
 - Conexão com MySQL usando PDO
+- Prepared Statements e prevenção de SQL Injection
 - Validação de dados no backend
-- Prepared Statements e segurança contra SQL Injection
-- Uso de arrays associativos e orientação a objetos
 - Fluxo de requisições HTTP em aplicações web
 
 ---
-
 ## 🎯 Objetivos
 
 - ✅ Dominar HTML5 semântico e acessibilidade

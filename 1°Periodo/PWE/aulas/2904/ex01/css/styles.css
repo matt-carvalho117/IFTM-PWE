@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: darkolivegreen;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
+a:hover{
+    background-color: white;
+    color: green;
+}

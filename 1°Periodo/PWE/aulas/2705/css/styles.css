@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: green;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container > div{
+    border: 1px solid black;
+    padding: 10px;
+}
+section > div > div{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+@media screen and (min-width: 500px){
+     body{
+        background-color: antiquewhite;
+     }
+    .container{
+        flex-direction: row;
+        width: 1200px;
+        margin: auto;
+    }
+    .sectwo > div > div:nth-of-type(2){
+        flex-grow: 2;
+    }
+}

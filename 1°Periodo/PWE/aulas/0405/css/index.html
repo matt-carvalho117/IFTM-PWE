@@ -1,0 +1,56 @@
+<h2>Filmes:</h2>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+    function Filmes(){
+        var nome;
+        var classificacao;
+        var genero;
+        var ano;
+        this.setFilmes = function(_nome, _classificacao, _genero,_ano) {
+            this.nome = _nome;
+            this.classificacao = _classificacao;
+            this.genero = _genero;
+            this.ano = _ano;
+        };
+        this.getNome = function() {
+            return this.nome;
+        };
+        this.setNome = function(_nome) {
+            this.nome = _nome;
+        };
+        this.getClassificacao = function() {
+            return this.classificacao;
+        };
+        this.mostrar = function() {
+            return this.nome + " " + this.classificacao + " " + this.genero + " " + this.ano;
+        };
+    }
+
+    let catalogo = new Array();
+
+    catalogo[0] = new Filmes();
+    catalogo[1] = new Filmes();
+    catalogo[2] = new Filmes();
+    catalogo[3] = new Filmes();
+   
+   
+    catalogo[0].setFilmes("Silêncio dos inocentes", 18, "suspense",1996);
+    catalogo[1].setFilmes("Titanic", 18, "romance", 1997);
+    catalogo[2].setFilmes("Diabo veste prada", 15, "drama", 2000);
+    catalogo[3].setFilmes("Chicago", 14, "musical", 2001);
+   
+    //var cat = new Array();
+   
+    //cat = clone(catalogo);
+
+    function mostrarElementos(catalogo){
+        var texto = "";
+        for(let i = 0; i < catalogo.length; i++)
+            texto += catalogo[i].getClassificacao() + "<br>";
+        return texto;    
+    }
+    document.getElementById("demo1").innerHTML = "Resultado: <br> " + mostrarElementos(catalogo);

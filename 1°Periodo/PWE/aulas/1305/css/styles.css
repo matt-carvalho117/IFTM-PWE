@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    border: 1px solid red;
+}
+
+@media screen and (min-width: 760px){
+    .container{
+        flex-direction: row;
+    }
+    .box{
+        width: 25%;
+    }
+}
