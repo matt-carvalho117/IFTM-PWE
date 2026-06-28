@@ -1,64 +1,123 @@
+/* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Play:wght@400;700&display=swap');
 
-*{
+
+/* Inicio estilizacao geral por tags */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   font-family: "Play", sans-serif;
+    font-family: "Play", sans-serif;
 }
-header ul{
+
+header ul {
     list-style: none;
 }
-a{
+
+section {
+    padding: 100px 0px;
+}
+
+a {
     text-decoration: none;
     color: white;
 }
-a:visited{
+
+a:visited {
     color: white;
 }
-p{
-    color: #e2e8f0;
+
+p {
+    color: white;
     margin: 10px 0px;
 }
-h1, h2, h3{
+
+h1,
+h2,
+h3 {
     font-family: "Electrolize", sans-serif;
     color: white;
 }
-figcaption{
+
+figcaption {
     color: white;
 }
-img{
+
+img {
     width: 100%;
-     border-radius: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
-section:nth-of-type(odd){
+
+section:nth-of-type(odd) {
     background-color: #0b0e14;
 }
-section:nth-of-type(even){
+
+section:nth-of-type(even) {
     background-color: #121824;
 }
-section > div{
+
+section>div {
     width: 90%;
     margin: auto;
-    padding: 50px 0px 30px;
 }
+
+footer {
+    background-color: #0b0e14;
+    text-align: center;
+    font-size: small;
+    padding: 40px;
+}
+
+table {
+    color: white;
+    width: 100%;
+    margin: 40px 0px;
+    text-align: justify;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+thead {
+    text-align: center;
+}
+
+table tr:nth-of-type(odd) {
+    background-color: #121824;
+}
+
+/* Fim estilizacao geral por tags */
+
+
+/* Inicio estilizacao por classes */
+
+/* Index */
 .btn {
     padding: 15px 20px;
     border-radius: 20px;
     border: 1px solid #00f0ff;
     background-color: #121824;
-    margin: 20px 0px;
+    margin: 20px 5px;
     transition: all 0.1s;
     color: white;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
-.btn:active{
+
+.btn:active {
     transform: scale(0.9);
 }
-.menu, .nav-links{
+
+.menu,
+.nav-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -66,74 +125,158 @@ section > div{
     background-color: #0b0e14;
     padding: 15px 0px;
 }
-.nav-links a{
+
+.nav-links a {
     padding: 20px 7px;
     font-size: 1.2em;
     transition: all 0.1s;
+}
 
+.nav-links a:hover {
+    background-color: #00f0ff;
+    color: black;
 }
-.nav-links a:hover{
-    text-decoration: underline;
-}
-.nav-links .active{
+
+.nav-links .active {
     color: #00f0ff;
 }
-.menu{
+
+.menu {
     border-bottom: 2px solid rgba(0, 240, 255, 0.4);
 }
-.logo span{
-    color:#00f0ff;
+
+.logo span {
+    color: #00f0ff;
     font-weight: bold;
 }
-.logo p{
+
+.logo p {
     font-size: 1.5em;
 }
-.welcome h1{
+
+.welcome h1,
+.sobre1 h1,
+.gaiasection h1 {
     font-size: 3.5em;
     line-height: 0.9;
 }
-.welcome p:nth-of-type(2){
+
+.welcome p:nth-of-type(2),
+.sobre1 p:nth-of-type(2),
+.gaiasection p:nth-of-type(2) {
     text-align: right;
 }
-.line{
+
+.line {
     height: 1px;
     border: 1px solid white;
     margin: 20px 0px;
 }
-.objetivos > div{
+
+.objetivos>div {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
 }
-.objetivos > div > div{
+
+.objetivos>div>div {
     display: flex;
     flex-direction: column;
     text-align: justify;
-    gap: 20px;
+    gap: 100px;
 }
 
-.card{
+.card {
     padding: 20px;
     border: 1px solid rgba(0, 240, 255, 0.3);
     border-radius: 10px;
     width: 90%;
     margin: auto;
     transition: all 0.2s;
+    height: 375px;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-30px);
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
     border: 1px solid #00f0ff;
 }
-.card h3{
+
+.card h3 {
     margin: 20px 0px;
+    transform: translateY(-70px);
 }
 
+.card img {
+    transform: translateY(-40%);
+}
 
+.card p {
+    transform: translateY(-80px);
+}
 
-footer{
-    background-color: #0b0e14;
+/* Index fim */
+
+/* Sobre */
+.sec p {
+    padding: 10px 0px;
+}
+
+/* Sobre fim */
+
+/* Gaia */
+.matriz-gaia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
     text-align: center;
-    font-size: small;
-    padding: 40px;
 }
+
+.subs {
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.matriz-gaia:has(.gaia:hover) .subs {
+    opacity: 1;
+}
+
+.historiagaia>div>div {
+    background: rgba(87, 87, 87, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    margin: 30px 0px;
+}
+.gaiasection span{
+    color: #bbdf8b;
+    transition: letter-spacing 0.5s;
+}
+.gaiasection span:hover{
+    letter-spacing: 40px;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.titulocentro .line{
+    width: 40%;
+    margin: 20px auto;
+}
+.titulocentro{
+    text-align: center;
+}
+.mesclar {
+    grid-row: span 2;
+}
+.mesclarlinha{
+    grid-column: span 2;
+}
+/* Gaia fim */

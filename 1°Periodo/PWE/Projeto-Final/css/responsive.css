@@ -1,9 +1,16 @@
 @media screen and (min-width: 768px) {
     section>div {
-        width: 1200px;
+        width: 80%;
         margin: auto;
     }
 
+    table{
+        width: 90%;
+        margin: 40px auto; 
+    }
+    table img{
+        width: 100px;
+    }
     .menu {
         justify-content: space-between;
         padding: 15px 50px;
@@ -12,31 +19,76 @@
 
     .nav-links a {
         padding: 20px 15px;
-
     }
 
     .objetivos>div>div {
         flex-direction: row;
+        gap: 50px;
     }
 
-    .sobre img {
-        width: 50%;
-    }
-
-    .welcome h1 {
+    .welcome h1, .sobre1 h1, .gaiasection h1 {
         font-size: 6em;
         padding: 20px 0px;
     }
-    .welcome > div{
+
+    .welcome>div {
         width: 70%;
+        background: rgba(87, 87, 87, 0.1);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        padding: 40px;
     }
-    .sobre div div:nth-of-type(2){
+
+    .welcome {
+        background-image: url('../img/ai.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sobre>div {
         display: flex;
         flex-direction: row;
+        gap: 100px;
+        align-items: center;
     }
-   .sobre div div:nth-of-type(2) img{
-    width: 100%;
-   }
+
+    .sobre div {
+        width: 80%;
+    }
+
+    .equipe>div {
+        flex-direction: row-reverse;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .matriz-gaia {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(3, 150px);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .subs {
+        opacity: 0;
+        transition: all 1s ease-in;
+    }
+
+    .matriz-gaia:has(.gaia:hover) .subs {
+        opacity: 1;
+    }
+    .gaiasection .line{
+        height: 400px;
+    }
+
+    .invert>div {
+        flex-direction: row-reverse;
+    }
+    
 
     footer {
         font-size: medium;
