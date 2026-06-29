@@ -217,7 +217,6 @@ table img {
     width: 90%;
     margin: auto;
     transition: all 0.2s;
-    height: 375px;
 }
 
 .card:hover {
@@ -236,7 +235,7 @@ table img {
 }
 
 .card p {
-    transform: translateY(-80px);
+    transform: translateY(-45px);
     margin-bottom: 10px
 }
 
