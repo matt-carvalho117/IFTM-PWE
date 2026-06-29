@@ -88,7 +88,15 @@ thead {
 }
 
 table tr:nth-of-type(odd) {
+    background-color: #0b0e14;
+}
+
+table tr:nth-of-type(even) {
     background-color: #121824;
+}
+
+table img {
+    margin: 0;
 }
 
 /* Fim estilizacao geral por tags */
@@ -167,6 +175,22 @@ table tr:nth-of-type(odd) {
     text-align: right;
 }
 
+.welcome>div {
+    background: rgba(87, 87, 87, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+}
+
+.welcome {
+    background-image: url('../img/ai.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .line {
     height: 1px;
     border: 1px solid white;
@@ -213,6 +237,7 @@ table tr:nth-of-type(odd) {
 
 .card p {
     transform: translateY(-80px);
+    margin-bottom: 10px
 }
 
 /* Index fim */
@@ -252,13 +277,24 @@ table tr:nth-of-type(odd) {
     padding: 40px 20px;
     margin: 30px 0px;
 }
-.gaiasection span{
+
+.historiagaia h2 {
+    text-align: center;
+}
+
+.gaiasection span {
     color: #bbdf8b;
     transition: letter-spacing 0.5s;
 }
-.gaiasection span:hover{
+
+.gaiasection span:hover {
     letter-spacing: 40px;
 }
+
+.gaia img {
+    pointer-events: none;
+}
+
 .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -266,17 +302,23 @@ table tr:nth-of-type(odd) {
     justify-content: center;
     align-items: center;
 }
-.titulocentro .line{
+
+.titulocentro .line {
     width: 40%;
     margin: 20px auto;
 }
-.titulocentro{
+
+.titulocentro {
     text-align: center;
 }
+
 .mesclar {
     grid-row: span 2;
 }
-.mesclarlinha{
+
+.mesclarlinha {
     grid-column: span 2;
 }
+
 /* Gaia fim */
+
